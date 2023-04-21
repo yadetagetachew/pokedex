@@ -27,7 +27,6 @@ const pokeballInventoryOpener = document.getElementById("pokeimg");
 const bluelightImg = {
   image: "",
 };
-
 // main
 getAllPokemon();
 localStorage.getItem('userPokemonList') ? userPokemonList = JSON.parse(localStorage.getItem('userPokemonList')) : null
@@ -35,7 +34,6 @@ renderInverntoryAmount()
 filterInput.addEventListener("keyup", filterPokedexByName);
 pokeballInventoryOpener.addEventListener("click", openInventorySideMenu);
 pokeballInventoryCloser.addEventListener("click", closeInventorySideMenu);
-
 // search bar
 // get value of input
 function filterPokedexByName() {
@@ -52,7 +50,6 @@ function filterPokedexByName() {
     }
   }
 }
-
 // event callbacks
 function catchEm() {
   userPokemonList.push(displayedPokemonsInfo)
@@ -197,7 +194,6 @@ function renderInverntoryAmount(){
   classes[i].innerHTML = inventoryAmount
  }
 }
-
 function deletePokemon(index){
   userPokemonList.splice(index, 1)
   localStorage.setItem('userPokemonList', JSON.stringify(userPokemonList))
